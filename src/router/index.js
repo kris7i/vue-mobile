@@ -1,7 +1,7 @@
 import Vue from 'vue';
 import VueRouter from 'vue-router';
 
-// 在升级了ue-Router版本到到3.1.0及以上之后，页面在跳转路由控制台会报Uncaught (in promise)的问题
+// 在升级vue-Router版本到到3.1.0及以上之后，页面在跳转路由控制台会报Uncaught (in promise)的问题
 // https://blog.csdn.net/haidong55/article/details/100939076
 const routerReplace = VueRouter.prototype.replace;
 VueRouter.prototype.replace = function replace(location) {

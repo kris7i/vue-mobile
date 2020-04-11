@@ -18,7 +18,7 @@
           :rules="[{ required: true, message: '请填写密码' }]"
         />
         <div style="margin: 16px;">
-          <van-button round block type="info" native-type="submit" >
+          <van-button round block type="info" native-type="submit" :loading="loading" :disabled='loading'>
             提交
           </van-button>
         </div>
@@ -45,7 +45,8 @@
         console.log('submit', values);
         this.loading = true;
         this.login(values).then(() => {
-          this.$router.replace(this.$route.query.redirect || '/index');
+          this.loading = false;
+          this.$router.replace(this.$route.query.redirect || '/home');
         });
       },
     },
