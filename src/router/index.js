@@ -3,13 +3,13 @@ import VueRouter from 'vue-router';
 
 // 在升级vue-Router版本到到3.1.0及以上之后，页面在跳转路由控制台会报Uncaught (in promise)的问题
 // https://blog.csdn.net/haidong55/article/details/100939076
-const routerReplace = VueRouter.prototype.replace;
+const VueRouterReplace = VueRouter.prototype.replace;
 VueRouter.prototype.replace = function replace(location) {
-  return routerReplace.call(this, location).catch(error => error);
+  return VueRouterReplace.call(this, location).catch(error => error);
 };
-const originalPush = VueRouter.prototype.push;
+const VueRouterPush = VueRouter.prototype.push;
 VueRouter.prototype.push = function push(location) {
-  return originalPush.call(this, location).catch(error => error);
+  return VueRouterPush.call(this, location).catch(error => error);
 };
 
 // 进度条
