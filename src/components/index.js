@@ -1,7 +1,4 @@
-import Vue from 'vue';
 // 根据组件情况 在此处全局引入
-import './svg-icon';
-import './vant';
-import GridPage from './grid/grid-page';
-
-Vue.component('grid-page', GridPage);
+import './grid';  // 自定义布局组件
+import './svg-icon';  // 自定义svg组件
+import './vant';   // vant组件
