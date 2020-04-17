@@ -47,7 +47,7 @@
         this.login(values).then(() => {
           this.loading = false;
           this.$router.replace(this.$route.query.redirect || '/home');
-        });
+        }).catch(() => this.loading = false);
       },
     },
   };
