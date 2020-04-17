@@ -1,4 +1,4 @@
-import Root from '../views/root'
+import Root from '../views/root';
 import Home from '../views/root/home/index';
 
 // 路由path路径 ->对应-> component文件路径, 便于以后修改快速定位到目标文件夹
