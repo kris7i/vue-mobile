@@ -12,7 +12,7 @@ const routes = [
       {
         path: '/home',
         name: '首页',
-        component: Home
+        component: Home,
       },
       {
         path: '/course',
@@ -55,14 +55,14 @@ const routes = [
   {
     path: '/404',
     name: '404',
-    component: () => import('@/views/error-page')
+    component: () => import('@/views/error-page'),
   },
 ];
 
 // 最后添加 *
 routes.push({
   path: '*',
-  redirect: '/404'
+  redirect: '/404',
 });
 
 export default routes;
