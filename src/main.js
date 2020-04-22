@@ -7,7 +7,7 @@ import store from './store';
 import './main.scss';
 
 // 全局组件
-import './components'
+import './components';
 
 Vue.config.productionTip = false;
 
